@@ -1,7 +1,10 @@
-def my_each(words) # put argument(s) here
-  # code here
-  words.each do |greeting|
-    puts greeting
+def my_each(words)
+  counter = 0
+  empty_array = []
+    while counter < words.length
+    new_array = yield words[counter]
+    counter += 1
+    empty_array << new_array 
   end
-
+  words
 end
